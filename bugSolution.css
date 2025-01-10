@@ -1,0 +1,2 @@
+To fix the unexpected layout behavior, explicitly set the `width` of the flexbox item before using `calc()` for the margin or other properties. By specifying the `width`, the browser can accurately calculate the remaining space after subtracting the specified value.  Ensure the correct order of operations in complex `calc()` expressions using parentheses to group terms correctly. 
+For instance: change `margin-left: calc(100% - 10px);` to `width: calc(100% - 10px);` or use appropriate width to make sure the calculation makes sense.
